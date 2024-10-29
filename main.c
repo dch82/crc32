@@ -21,5 +21,5 @@ int main(int argc, char *argv[]) {
         // invert the hash
         crc32 ^= 0xFFFFFFFFu;
         // print the output
-        printf("%lx\n", crc32);
+        printf("%lX\n", crc32);
 }
