@@ -10,11 +10,9 @@
 int main(int argc, char *argv[]) {
         int ch;                                 // buffer for the input
         unsigned long crc32 = 0xFFFFFFFFu;      // initialise output
-
-        // stop hashing when there is nothing left to hash
-        while (scanf("%d", &ch) != EOF) {
-                // get the current byte
-                ch = getchar();
+        // the calculation part
+        // loop until an EOF is read
+        while ((ch = getchar()), ch != EOF) {
                 // find the lookup index
                 const unsigned long lookup_index = (crc32 ^ ch) & 0xff;
                 // calculate the hash for the byte
@@ -23,5 +21,5 @@ int main(int argc, char *argv[]) {
         // invert the hash
         crc32 ^= 0xFFFFFFFFu;
         // print the output
-        printf("%lx\n", crc32);
+        printf("\n%lx\n", crc32);
 }
