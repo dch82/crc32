@@ -1,6 +1,6 @@
 #include "crc32_table.h"
 
-unsigned long crc32(const unsigned char input[], size_t input_size) {
+unsigned long crc32(const unsigned char *input[], size_t input_size) {
         /* Initialise CRC-32 to starting value */
         unsigned long crc32 = 0xFFFFFFFF;
         /* Cyclic part */
