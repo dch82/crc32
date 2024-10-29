@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
                 crc32 = (crc32 >> 8) ^ crc32_table[lookup_index];
         }
         // invert the hash
-        crc32 == ~crc32;
+        crc32 = ~crc32;
         // print the output
         printf("%lx\n", crc32);
 }
