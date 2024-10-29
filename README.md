@@ -13,16 +13,14 @@ the hash is outputed through stdout
 user input is in *italics*
 
 #### from command line
-<code>
-<i>crc32</i>
-<i>hello world!</i>3B4C26D
-<code>
+
+<p><code><i>crc32</i>
+<i>hello world!</i>3B4C26D<code></p>
 
 #### piped from another command
-<code>
-<i>neowofetch | ./crc32<i>
-4C4F0D20
-</code>
+
+<p><code><i>neowofetch | ./crc32<i>
+4C4F0D20</code></p>
 
 #### from a file
 
