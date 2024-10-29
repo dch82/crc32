@@ -1,7 +1,9 @@
 /*
  * crc32_table
  *
- * An array of 256 32bit values needed for CRC32.
+ * an array of 256 32 bit values used to calculate a crc32 hash
+ *
+ * generated with a crc table generator program
  */
 
 const unsigned long crc32_table[] = {
