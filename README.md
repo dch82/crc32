@@ -10,29 +10,25 @@ the hash is outputed through stdout
 
 ### examples
 
-user input is in *italics*
-
 #### from command line
-
-<p><code><i>crc32</i>
-<i>hello world!</i>3B4C26D<code></p>
+``` sh
+$ crc32
+hello world!3B4C26D
+```
 
 #### piped from another command
 
-<p><code><i>neowofetch | ./crc32<i>
-4C4F0D20</code></p>
+``` sh
+neowofetch | crc32
+84F14262
+```
 
 #### from a file
 
-##### `hello.txt`
-```
-hello world!
-```
-
-<code>
-<i>crc32 < hello.txt<i>
+``` sh
+crc32 < hello.txt
 3B4C26D
-</code>
+```
 
 ## getting a binary
 
