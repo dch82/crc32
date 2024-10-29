@@ -12,7 +12,7 @@ the hash is outputed through stdout
 
 #### from command line
 ``` sh
-$ crc32
+crc32
 hello world!3B4C26D
 ```
 
