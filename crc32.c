@@ -1,10 +1,10 @@
 /*
- * crc32_table
+ * crc32
  *
- * an array of 256 32 bit values used to calculate a crc32 hash
- *
- * generated with a crc table generator program
+ * super simple crc32 calculator written by dch82
  */
+
+#include <stdio.h>
 
 const unsigned long crc32_table[] = {
         0x00000000, 0x77073096, 0xEE0E612C, 0x990951BA,
@@ -72,3 +72,20 @@ const unsigned long crc32_table[] = {
         0xB3667A2E, 0xC4614AB8, 0x5D681B02, 0x2A6F2B94,
         0xB40BBE37, 0xC30C8EA1, 0x5A05DF1B, 0x2D02EF8D,
 };
+
+int main(int argc, char *argv[]) {
+        int ch;                                 // buffer for the input
+        unsigned long crc32 = 0xFFFFFFFFu;      // initialise output
+        // the calculation part
+        // loop until an EOF is read
+        while ((ch = getchar()), ch != EOF) {
+                // find the lookup index
+                const unsigned long lookup_index = (crc32 ^ ch) & 0xff;
+                // calculate the hash for the byte
+                crc32 = (crc32 >> 8) ^ crc32_table[lookup_index];
+        }
+        // invert the hash
+        crc32 ^= 0xFFFFFFFFu;
+        // print the output
+        printf("%lX\n", crc32);
+}

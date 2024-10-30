@@ -2,8 +2,8 @@ CFLAGS = -Wall
 
 all: crc32
 
-crc32: main.c crc32_table.h
-	cc $(CFLAGS) main.c -o crc32
+crc32: crc32.c
+	cc $(CFLAGS) crc32.c -o crc32
 
 clean:
 	rm crc32
