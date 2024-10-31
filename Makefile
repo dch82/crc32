@@ -7,3 +7,6 @@ crc32: crc32.c
 
 clean:
 	rm crc32
+
+run:
+	./crc32

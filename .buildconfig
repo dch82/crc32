@@ -1,0 +1,12 @@
+[default]
+name=Default
+runtime=podman:4fe39bf210868096f03e18fc9d9567ef9e2c127d8453e2ca5103c79099dd2704
+toolchain=default
+config-opts=
+run-opts=
+prefix=/var/home/dch82/Projects/.gnome-builder/projects/crc32/install/podman-4fe39bf210868096f03e18fc9d9567ef9e2c127d8453e2ca5103c79099dd2704
+app-id=
+postbuild=
+prebuild=
+run-command=
+default=true
